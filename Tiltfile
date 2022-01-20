@@ -18,7 +18,7 @@ k8s_custom_deploy(
     ]
 )
 
-allow_k8s_contexts('arn:aws:eks:us-east-2:469255042099:cluster/TAP-test')
+allow_k8s_contexts('arn:aws:eks:us-east-2:469255042099:cluster/TAP')
 
 k8s_resource('tanzu-java-web-app', port_forwards=["8080:8080"],
             extra_pod_selectors=[{'serving.knative.dev/service': 'tanzu-java-web-app'}])
